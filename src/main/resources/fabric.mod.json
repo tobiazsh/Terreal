@@ -13,14 +13,17 @@
 	},
 	"license": "CC by NC 4.0",
 	"icon": "assets/terreal/icon.png",
-	"environment": "server",
+	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"terreal.Terreal"
 		]
 	},
 	"mixins": [
-		"terreal.mixins.json"
+		{
+			"config": "terreal.mixins.json",
+			"environment": "*"
+		}
 	],
 	"depends": {
 		"fabricloader": ">=0.17.2",
