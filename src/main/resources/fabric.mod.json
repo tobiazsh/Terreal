@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "terreal",
+	"version": "${version}",
+	"name": "Terreal",
+	"description": "A mod that makes the Minecraft World Generation look a little more realistic with real temperature differences between different latitudes and larger biomes. Almost everything is customizable!",
+	"authors": [
+		"Tobiazsh"
+	],
+	"contact": {
+		"homepage": "https://github.com/tobiazsh/terreal",
+		"sources": "https://github.com/tobiazsh/terreal"
+	},
+	"license": "CC by NC 4.0",
+	"icon": "assets/terreal/icon.png",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"terreal.Terreal"
+		]
+	},
+	"mixins": [
+		"terreal.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "=1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
