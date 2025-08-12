@@ -3,7 +3,9 @@
 	"package": "terreal.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"MultiNoiseSamplerAccessor",
+		"AbstractMultiNoiseSamplerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
