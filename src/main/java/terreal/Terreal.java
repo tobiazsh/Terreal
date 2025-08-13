@@ -11,7 +11,8 @@ public class Terreal implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		LOGGER.info("Initializing Terreal...");
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Terreal initialized successfully!");
 	}
 }
