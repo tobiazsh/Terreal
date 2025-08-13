@@ -146,18 +146,8 @@ public class WorldGenerationConfig {
     // PRESETS -------------------------------------------------------------------------------------------------------------------------------
 
     public enum Preset {
-        DEFAULT("default"),
-        REALISTIC("realistic");
-
-        private final String name;
-
-        Preset(String name) {
-            this.name = name;
-        }
-
-        public String getName() {
-            return name;
-        }
+        DEFAULT,
+        REALISTIC
     }
 
     public static WorldGenerationConfig getDefault(long worldSeed) {
@@ -212,7 +202,7 @@ public class WorldGenerationConfig {
 
         // Checks if any preset is present in the TOML File
         if (toml.contains("preset")) {
-            Preset preset = Preset.valueOf(toml.getString("preset"));
+            Preset preset = Preset.valueOf(toml.getString("preset").toUpperCase());
 
             switch (preset) {
                 case REALISTIC:
@@ -279,9 +269,9 @@ public class WorldGenerationConfig {
         Map<String, Object> map = new HashMap<>();
 
         if (this.matches(DEFAULT_CONFIG)) {
-            map.put("preset", Preset.DEFAULT.getName());
+            map.put("preset", Preset.DEFAULT.name());
         } else if (this.matches(REALISTIC_CONFIG)) {
-            map.put("preset", Preset.REALISTIC.getName());
+            map.put("preset", Preset.REALISTIC.name());
         } else {
             map.put("pole_to_pole_distance", POLE_TO_POLE_DISTANCE);
             map.put("equator_offset_blocks", EQUATOR_OFFSET_BLOCKS);
