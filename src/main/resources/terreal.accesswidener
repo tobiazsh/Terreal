@@ -1,3 +1,4 @@
 accessWidener v2 named
 
 accessible method net/minecraft/util/math/noise/OctavePerlinNoiseSampler <init> (Lnet/minecraft/util/math/random/Random;Lcom/mojang/datafixers/util/Pair;Z)V
+accessible field net/minecraft/server/MinecraftServer session Lnet/minecraft/world/level/storage/LevelStorage$Session;
