@@ -5,9 +5,7 @@
 	"mixins": [
 		"ExampleMixin",
 		"MultiNoiseSamplerAccessor",
-		"AbstractMultiNoiseSamplerMixin",
-		"BiomeAccessAccessor",
-		"WorldAccessor"
+		"AbstractMultiNoiseSamplerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
