@@ -33,5 +33,7 @@
 	},
 	"suggests": {
 		"another-mod": "*"
-	}
+	},
+
+	"accesswidener": "terreal.accesswidener"
 }
