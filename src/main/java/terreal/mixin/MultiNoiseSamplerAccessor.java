@@ -9,15 +9,15 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 public interface MultiNoiseSamplerAccessor {
 
     @Accessor("temperature")
-    DensityFunction getTemperatureFunction();
+    DensityFunction terreal$getTemperatureFunction();
 
     @Accessor("humidity")
-    DensityFunction getHumidityFunction();
+    DensityFunction terreal$getHumidityFunction();
 
     @Accessor("continentalness")
-    DensityFunction getContinentalnessFunction();
+    DensityFunction terreal$getContinentalnessFunction();
 
     @Accessor("erosion")
-    DensityFunction getErosionFunction();
+    DensityFunction terreal$getErosionFunction();
 
 }
