@@ -50,7 +50,11 @@ public class WorldInfoStorage {
                     ? WorldGenerationConfig.parseFile(FabricLoader.getInstance().getConfigDir().toAbsolutePath().resolve(CONFIG_FILE).toFile(), seed)
                     : WorldGenerationConfig.getDefault(seed);
 
-            config.writeFile(getWorldDirectory().toAbsolutePath().resolve(CONFIG_FILE).toFile()); // Create a config file in the world directory
+            Path configFile = getWorldDirectory().toAbsolutePath().resolve(CONFIG_FILE);
+            Files.createDirectories(configFile.getParent());
+            Files.createFile(configFile);
+            config.writeFile(configFile.toFile()); // Create a config file in the world directory
+
             this.currentConfig = config;
         }
     }
